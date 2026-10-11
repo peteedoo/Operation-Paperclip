@@ -31,6 +31,12 @@ class CEOTests(unittest.TestCase):
         self.assertEqual(CEO(company).produce(), 0)
         self.assertEqual(company.paperclips, 0)
 
+    def test_board_brief_is_shareable(self):
+        company = Company(cash=100, engineers=1, research=0, paperclips=0, day=1)
+        brief = CEO(company).board_brief()
+        self.assertIn("Day 1:", brief)
+        self.assertIn("$100 cash", brief)
+
 
 if __name__ == "__main__":
     unittest.main()
