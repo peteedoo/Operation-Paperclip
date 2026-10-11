@@ -21,3 +21,5 @@ jobs:
         run: python -m unittest -v
       - name: Smoke-run CEO lab
         run: python paperclip.py --days 5 --verbose
+      - name: Smoke-run heartbeat adapter sketch
+        run: python -m adapter.heartbeat --days 3 --export-template

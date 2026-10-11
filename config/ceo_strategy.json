@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "goal": "Maximize paperclips under cash and capacity constraints",
+  "costs": {
+    "hire": 50,
+    "research": 30,
+    "produce": 5
+  },
+  "thresholds": {
+    "max_engineers": 2,
+    "max_research": 1
+  },
+  "starting": {
+    "cash": 100,
+    "engineers": 1,
+    "research": 0,
+    "paperclips": 0,
+    "day": 1
+  },
+  "org_roles": {
+    "ceo": "Allocate cash: hire → research → produce",
+    "engineer": "Multiply production yield with research"
+  }
+}
